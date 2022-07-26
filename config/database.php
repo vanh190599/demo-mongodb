@@ -91,6 +91,20 @@ return [
             'prefix_indexes' => true,
         ],
 
+        'mongodb' => [
+            'driver'   => 'mongodb',
+            //'host'     => explode(',', env('DB_MONGO_HOST', 'localhost')),
+            'host'     => env('DB_MONGO_HOST', 'localhost'),
+            'port'     => env('DB_MONGO_PORT', 27017),
+            'database' => env('DB_MONGO_DATABASE'),
+            'username' => env('DB_MONGO_USERNAME'),
+            'password' => env('DB_MONGO_PASSWORD'),
+            'options' => [
+                'database' => env('DB_MONGO_DATABASE'), // sets the authentication database required by mongo 3
+                //env('DB_MONGO_REPLICA') ? 'replicaSet' : '' => env('DB_MONGO_REPLICA')
+            ]
+        ],
+
     ],
 
     /*
