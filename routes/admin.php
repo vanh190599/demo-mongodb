@@ -9,4 +9,5 @@ Route::post('/update', 'AdminController@update')->name('admin.update');
 
 // test
 Route::get('/test', 'AdminController@test')->name('admin.test');
+Route::resource('form','FormController');
 
